@@ -14,7 +14,7 @@ module IsTaggable
     end
     
     def to_s
-      join(', ')
+      @@delimiter.blank? ? join(@@delimiter) : join("#{@@delimiter} ")
     end
   end
 
